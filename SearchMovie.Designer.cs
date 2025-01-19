@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchMovie));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.moviesDGV = new System.Windows.Forms.DataGridView();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.home_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.desc = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.errorBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.moviesDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,17 +48,19 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(562, 43);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // dataGridView1
+            // moviesDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(297, 162);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(850, 327);
-            this.dataGridView1.TabIndex = 1;
+            this.moviesDGV.BackgroundColor = System.Drawing.Color.Black;
+            this.moviesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.moviesDGV.Location = new System.Drawing.Point(297, 162);
+            this.moviesDGV.Name = "moviesDGV";
+            this.moviesDGV.RowHeadersWidth = 51;
+            this.moviesDGV.RowTemplate.Height = 24;
+            this.moviesDGV.Size = new System.Drawing.Size(850, 327);
+            this.moviesDGV.TabIndex = 1;
+            this.moviesDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // search_icon
             // 
@@ -121,6 +124,18 @@
             this.message.Size = new System.Drawing.Size(0, 20);
             this.message.TabIndex = 18;
             // 
+            // errorBox
+            // 
+            this.errorBox.BackColor = System.Drawing.Color.Tan;
+            this.errorBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.errorBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorBox.ForeColor = System.Drawing.Color.Red;
+            this.errorBox.Location = new System.Drawing.Point(418, 122);
+            this.errorBox.Name = "errorBox";
+            this.errorBox.Size = new System.Drawing.Size(100, 20);
+            this.errorBox.TabIndex = 19;
+            this.errorBox.TextChanged += new System.EventHandler(this.errorBox_TextChanged);
+            // 
             // SearchMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,19 +144,20 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1367, 692);
+            this.Controls.Add(this.errorBox);
             this.Controls.Add(this.message);
             this.Controls.Add(this.desc);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.home_btn);
             this.Controls.Add(this.search_icon);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.moviesDGV);
             this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SearchMovie";
             this.Text = "SearchMovie";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviesDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,11 +167,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView moviesDGV;
         private System.Windows.Forms.PictureBox search_icon;
         private System.Windows.Forms.Button home_btn;
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.Label desc;
         private System.Windows.Forms.Label message;
+        private System.Windows.Forms.TextBox errorBox;
     }
 }

@@ -19,27 +19,6 @@ namespace Movies_Project
             return System.Configuration.ConfigurationManager.ConnectionStrings["my_connection"].ConnectionString;
         }
 
-        private void LoadUsers()
-        {
-            using (SqlConnection conn = new SqlConnection(getConnectionStr()))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "Select * from Users";
-                    SqlDataAdapter data = new SqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    data.Fill(dt);
-                }
-                catch (Exception e)
-                {
-                    error_msgBox.Text = e.Message;
-                }
-
-            }
-
-        }
-
         private void checkUsers()
         {
             using (SqlConnection conn = new SqlConnection(getConnectionStr()))
