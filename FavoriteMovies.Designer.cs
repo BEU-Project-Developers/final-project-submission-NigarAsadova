@@ -33,17 +33,21 @@
             this.favorite_movies_lb = new System.Windows.Forms.Label();
             this.home_btn = new System.Windows.Forms.Button();
             this.delete_btn = new System.Windows.Forms.Button();
+            this.search_box = new System.Windows.Forms.TextBox();
+            this.search_icon = new System.Windows.Forms.PictureBox();
+            this.errorBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fav_movies_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // fav_movies_dgv
             // 
             this.fav_movies_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.fav_movies_dgv.Location = new System.Drawing.Point(381, 105);
+            this.fav_movies_dgv.Location = new System.Drawing.Point(74, 183);
             this.fav_movies_dgv.Name = "fav_movies_dgv";
             this.fav_movies_dgv.RowHeadersWidth = 51;
             this.fav_movies_dgv.RowTemplate.Height = 24;
-            this.fav_movies_dgv.Size = new System.Drawing.Size(597, 448);
+            this.fav_movies_dgv.Size = new System.Drawing.Size(1202, 370);
             this.fav_movies_dgv.TabIndex = 0;
             this.fav_movies_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.fav_movies_dgv_CellContentClick);
             // 
@@ -84,6 +88,38 @@
             this.delete_btn.Text = "Delete from Favorites";
             this.delete_btn.UseVisualStyleBackColor = false;
             // 
+            // search_box
+            // 
+            this.search_box.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_box.Location = new System.Drawing.Point(401, 103);
+            this.search_box.Name = "search_box";
+            this.search_box.Size = new System.Drawing.Size(562, 43);
+            this.search_box.TabIndex = 42;
+            this.search_box.TextChanged += new System.EventHandler(this.search_box_TextChanged);
+            // 
+            // search_icon
+            // 
+            this.search_icon.BackColor = System.Drawing.Color.White;
+            this.search_icon.Image = ((System.Drawing.Image)(resources.GetObject("search_icon.Image")));
+            this.search_icon.Location = new System.Drawing.Point(969, 103);
+            this.search_icon.Name = "search_icon";
+            this.search_icon.Size = new System.Drawing.Size(51, 43);
+            this.search_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.search_icon.TabIndex = 43;
+            this.search_icon.TabStop = false;
+            this.search_icon.Click += new System.EventHandler(this.search_icon_Click);
+            // 
+            // errorBox
+            // 
+            this.errorBox.BackColor = System.Drawing.Color.Black;
+            this.errorBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.errorBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorBox.ForeColor = System.Drawing.Color.Red;
+            this.errorBox.Location = new System.Drawing.Point(401, 152);
+            this.errorBox.Name = "errorBox";
+            this.errorBox.Size = new System.Drawing.Size(486, 20);
+            this.errorBox.TabIndex = 44;
+            // 
             // FavoriteMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -91,6 +127,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1358, 686);
+            this.Controls.Add(this.errorBox);
+            this.Controls.Add(this.search_icon);
+            this.Controls.Add(this.search_box);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.home_btn);
             this.Controls.Add(this.favorite_movies_lb);
@@ -99,6 +138,7 @@
             this.Name = "FavoriteMovies";
             this.Text = "FavoriteMovies";
             ((System.ComponentModel.ISupportInitialize)(this.fav_movies_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +150,8 @@
         private System.Windows.Forms.Label favorite_movies_lb;
         private System.Windows.Forms.Button home_btn;
         private System.Windows.Forms.Button delete_btn;
+        private System.Windows.Forms.TextBox search_box;
+        private System.Windows.Forms.PictureBox search_icon;
+        private System.Windows.Forms.TextBox errorBox;
     }
 }
