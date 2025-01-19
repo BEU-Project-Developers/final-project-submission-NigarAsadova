@@ -158,6 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SearchMovie";
             this.Text = "SearchMovie";
+            this.Load += new System.EventHandler(this.SearchMovie_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.moviesDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             this.ResumeLayout(false);

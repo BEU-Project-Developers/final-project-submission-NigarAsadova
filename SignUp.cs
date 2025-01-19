@@ -30,9 +30,9 @@ namespace Movies_Project
                 try
                 {
                     conn.Open();
-                    string checkQuery = "Select COUNT(*) From Users WHERE username = @username AND Password = @Password";
+                    string checkQuery = "Select COUNT(*) From Users WHERE Username = @Username AND Password = @Password";
                     SqlCommand cm = new SqlCommand(checkQuery, conn);
-                    cm.Parameters.AddWithValue("@username", usernameBox.Text);
+                    cm.Parameters.AddWithValue("@Username", usernameBox.Text);
                     cm.Parameters.AddWithValue("@Password", codeBox.Text);
                     int count = (int) cm.ExecuteScalar();
                     if(count > 0)
@@ -41,12 +41,20 @@ namespace Movies_Project
                     }
                     else
                     {
-                        string query = "Insert into Users(username, Password) Values (@username, @Password)";
+                        // Insert a new user into the Users table
+                        string query = "INSERT INTO Users (Username, Password, Gmail, FullName) VALUES (@Username, @Password, @Gmail, @FullName)";
                         SqlCommand cmm = new SqlCommand(query, conn);
-                        cmm.Parameters.AddWithValue("@username", usernameBox.Text);
-                        cmm.Parameters.AddWithValue("@Password", codeBox.Text);
+
+                        // Add parameters to the SQL query
+                        cmm.Parameters.AddWithValue("@Username", usernameBox.Text);
+                        cmm.Parameters.AddWithValue("@Password", codeBox.Text);  // Consider hashing the password before storing it
+                        cmm.Parameters.AddWithValue("@Gmail", gmailBox.Text);    // Ensure this field is filled correctly
+                        cmm.Parameters.AddWithValue("@FullName", nameBox.Text);  // Ensure this field is filled correctly
+
+                        // Execute the query to insert the new user
                         cmm.ExecuteNonQuery();
-                        messageBox.Text = "Success";
+
+                        messageBox.Text = "Success! You have been registered.";
                     }
 
                 }
@@ -71,6 +79,11 @@ namespace Movies_Project
         }
 
         private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
         {
 
         }

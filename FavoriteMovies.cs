@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,13 +34,7 @@ namespace Movies_Project
             {
                 conn.Open();
                 // Make sure to filter based on UserId (the current logged-in user)
-                string query = "SELECT f.FavoriteMovieId, m.Name, m.Rating, m.ReleaseDate, m.Description, m.Genre, " +
-                               "d.FullName, a.FullName AS 'Main Actor' " +
-                               "FROM Favorite_Movies f " +
-                               "INNER JOIN Movies m ON f.MovieId = m.MovieId " +
-                               "LEFT JOIN Directors d ON m.DirectorId = d.DirectorId " +
-                               "LEFT JOIN Actors a ON a.ActorId = m.FirstActorId " +
-                               "WHERE f.UserId = @UserId";  // Filter by the logged-in UserId
+                string query = "SELECT f.FavoriteMovieId, m.Name, m.Rating, m.ReleaseDate, m.Description, m.Genre, d.FullName AS 'Director' FROM Favorite_Movies f INNER JOIN Movies m ON f.MovieId = m.MovieId LEFT JOIN Directors d ON m.DirectorId = d.DirectorId WHERE f.UserId = @UserId ";  // Filter by the logged-in UserId
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@UserId", Login.UserId);  // Pass the UserId from Login class
@@ -90,7 +85,7 @@ namespace Movies_Project
                 try
                 {
                     conn.Open();
-                    string query = "SELECT f.FavoriteMovieId, m.Name, m.Rating, m.ReleaseDate, m.Description, m.Genre , d.FullName, a.FullName AS 'Main Actor' FROM Favorite_Movies f INNER JOIN Movies m ON f.MovieId = m.MovieId\r\nLEFT JOIN Directors d ON m.DirectorId = d.DirectorId LEFT JOIN Actors a ON a.ActorId = m.FirstActorId WHERE m.Name Like @Name";
+                    string query = "SELECT f.FavoriteMovieId, m.Name, m.Rating, m.ReleaseDate, m.Description, m.Genre , d.FullName FROM Favorite_Movies f INNER JOIN Movies m ON f.MovieId = m.MovieId LEFT JOIN Directors d ON m.DirectorId = d.DirectorId WHERE m.Name Like @Name";
                     SqlCommand cm = new SqlCommand(query, conn);
                     cm.Parameters.AddWithValue("@Name", "%" + search_box.Text + "%");
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(cm);
@@ -175,5 +170,9 @@ namespace Movies_Project
             }
         }
 
+        private void FavoriteMovies_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

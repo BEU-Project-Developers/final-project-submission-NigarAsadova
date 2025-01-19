@@ -198,5 +198,9 @@ namespace Movies_Project
             }
         }
 
+        private void SearchMovie_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

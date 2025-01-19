@@ -138,6 +138,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FavoriteMovies";
             this.Text = "FavoriteMovies";
+            this.Load += new System.EventHandler(this.FavoriteMovies_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fav_movies_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             this.ResumeLayout(false);
