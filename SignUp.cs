@@ -30,10 +30,10 @@ namespace Movies_Project
                 try
                 {
                     conn.Open();
-                    string checkQuery = "Select COUNT(*) From Users WHERE username = @username AND code = @code";
+                    string checkQuery = "Select COUNT(*) From Users WHERE username = @username AND Password = @Password";
                     SqlCommand cm = new SqlCommand(checkQuery, conn);
                     cm.Parameters.AddWithValue("@username", usernameBox.Text);
-                    cm.Parameters.AddWithValue("@code", codeBox.Text);
+                    cm.Parameters.AddWithValue("@Password", codeBox.Text);
                     int count = (int) cm.ExecuteScalar();
                     if(count > 0)
                     {
@@ -41,10 +41,10 @@ namespace Movies_Project
                     }
                     else
                     {
-                        string query = "Insert into Users(username, code) Values (@username, @code)";
+                        string query = "Insert into Users(username, Password) Values (@username, @Password)";
                         SqlCommand cmm = new SqlCommand(query, conn);
                         cmm.Parameters.AddWithValue("@username", usernameBox.Text);
-                        cmm.Parameters.AddWithValue("@code", codeBox.Text);
+                        cmm.Parameters.AddWithValue("@Password", codeBox.Text);
                         cmm.ExecuteNonQuery();
                         messageBox.Text = "Success";
                     }
@@ -66,6 +66,11 @@ namespace Movies_Project
         }
 
         private void signUpTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
         {
 
         }

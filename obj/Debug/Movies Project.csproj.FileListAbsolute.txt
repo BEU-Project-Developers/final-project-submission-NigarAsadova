@@ -24,3 +24,29 @@ C:\Users\Baku\Desktop\Learning C#\Movies Project\obj\Debug\Movies_Project.Favori
 C:\Users\Baku\Desktop\Learning C#\Movies Project\obj\Debug\Movies_Project.FavoriteActors.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\obj\Debug\Movies_Project.FavoriteMovies.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\obj\Debug\Movies_Project.FavoritesDirectors.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\bin\Debug\Mulish-Bold.ttf
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\bin\Debug\Movies Project.exe.config
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\bin\Debug\Movies Project.exe
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\bin\Debug\Movies Project.pdb
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies Project.csproj.AssemblyReference.cache
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.Actors.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.AddMovies.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.Directors.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.FavoriteActors.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.FavoriteMovies.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.Favorites.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.FavoritesDirectors.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.Form1.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.Home.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.Login.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.Properties.Resources.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.SearchMovie.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies_Project.SignUp.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies Project.csproj.GenerateResource.cache
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies Project.csproj.CoreCompileInputs.cache
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies Project.csproj.CopyComplete
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies Project.exe
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project-submission-NigarAsadova\obj\Debug\Movies Project.pdb
