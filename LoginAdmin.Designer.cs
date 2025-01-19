@@ -49,9 +49,8 @@
             this.error_msgBox.ForeColor = System.Drawing.Color.Red;
             this.error_msgBox.Location = new System.Drawing.Point(221, 303);
             this.error_msgBox.Name = "error_msgBox";
-            this.error_msgBox.Size = new System.Drawing.Size(100, 15);
+            this.error_msgBox.Size = new System.Drawing.Size(307, 15);
             this.error_msgBox.TabIndex = 23;
-            this.error_msgBox.TextChanged += new System.EventHandler(this.error_msgBox_TextChanged);
             // 
             // lockIcon
             // 
@@ -150,6 +149,7 @@
             this.back_btn.Text = "Back";
             this.back_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.back_btn.UseVisualStyleBackColor = false;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // LoginAdmin
             // 

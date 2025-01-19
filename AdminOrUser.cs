@@ -23,5 +23,12 @@ namespace Movies_Project
             this.Hide();
             loginAdmin.Show();
         }
+
+        private void user_btn_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
     }
 }

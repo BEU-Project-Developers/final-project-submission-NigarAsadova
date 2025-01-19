@@ -68,9 +68,11 @@ namespace Movies_Project
             checkAdmin();  
         }
 
-        private void error_msgBox_TextChanged(object sender, EventArgs e)
+        private void back_btn_Click(object sender, EventArgs e)
         {
-
+            AdminOrUser adminOrUser = new AdminOrUser();
+            this.Hide();
+            adminOrUser.Show();
         }
     }
 }

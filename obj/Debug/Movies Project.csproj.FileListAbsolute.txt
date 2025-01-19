@@ -78,3 +78,4 @@ C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies 
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies Project.pdb
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.AdminOrUser.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.LoginAdmin.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.HomeAdmin.resources

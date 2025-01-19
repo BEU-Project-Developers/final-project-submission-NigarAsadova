@@ -53,6 +53,7 @@
             this.user_btn.TabIndex = 1;
             this.user_btn.Text = "User";
             this.user_btn.UseVisualStyleBackColor = true;
+            this.user_btn.Click += new System.EventHandler(this.user_btn_Click);
             // 
             // adminoruserlb
             // 
