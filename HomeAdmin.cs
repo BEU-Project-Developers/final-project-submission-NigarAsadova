@@ -36,5 +36,12 @@ namespace Movies_Project
         {
 
         }
+
+        private void Actors_btn_Click(object sender, EventArgs e)
+        {
+            ActorsData ad = new ActorsData();
+            ad.Show();
+            this.Hide();
+        }
     }
 }

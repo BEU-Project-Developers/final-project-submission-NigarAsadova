@@ -55,6 +55,7 @@
             this.Actors_btn.TabIndex = 2;
             this.Actors_btn.Text = "Actors";
             this.Actors_btn.UseVisualStyleBackColor = true;
+            this.Actors_btn.Click += new System.EventHandler(this.Actors_btn_Click);
             // 
             // movies_btn
             // 

@@ -56,6 +56,18 @@
     <Compile Include="Actors.Designer.cs">
       <DependentUpon>Actors.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActorsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActorsData.Designer.cs">
+      <DependentUpon>ActorsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddActors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddActors.Designer.cs">
+      <DependentUpon>AddActors.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMovies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +168,12 @@
     </Compile>
     <EmbeddedResource Include="Actors.resx">
       <DependentUpon>Actors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActorsData.resx">
+      <DependentUpon>ActorsData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddActors.resx">
+      <DependentUpon>AddActors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddMovies.resx">
       <DependentUpon>AddMovies.cs</DependentUpon>
