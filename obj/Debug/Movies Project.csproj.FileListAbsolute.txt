@@ -79,3 +79,5 @@ C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies 
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.AdminOrUser.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.LoginAdmin.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.HomeAdmin.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.AddUser.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.UserData.resources
