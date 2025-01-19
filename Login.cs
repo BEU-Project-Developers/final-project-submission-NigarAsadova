@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,10 @@ namespace Movies_Project
 {
     public partial class Login : Form
     {
+
+        public static int UserId { get; private set; }
+
+
 
         private string getConnectionStr()
         {
@@ -26,20 +31,32 @@ namespace Movies_Project
                 try
                 {
                     conn.Open();
-                    string checkQuery = "Select COUNT(*) From Users WHERE Username = @Username AND Password = @Password";
+                    string checkQuery = "Select UserId From Users WHERE Username = @Username AND Password = @Password";
                     SqlCommand cm = new SqlCommand(checkQuery, conn);
                     cm.Parameters.AddWithValue("@Username", usernameBox.Text);
-                    cm.Parameters.AddWithValue("@Password", codeBox.Text) ;
+                    cm.Parameters.AddWithValue("@Password", codeBox.Text);
 
-                    int count = (int) cm.ExecuteScalar();
-                    if (count > 0) showMovie();
-                    else error_msgBox.Text = "sign up first";
-                } catch(Exception e)
+                    // Retrieve UserId 
+                    object result = cm.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        // Assign the retrieved UserId to the static UserId property
+                        UserId = Convert.ToInt32(result);
+                        showMovie();
+                    }
+                    else
+                    {
+                        error_msgBox.Text = "Sign up first";
+                    }
+                }
+                catch (Exception e)
                 {
-                    error_msgBox.Text = "Error";
+                    error_msgBox.Text = "Error: " + e.Message;
                 }
             }
         }
+
 
         public Login()
         {

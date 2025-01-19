@@ -100,6 +100,7 @@
             this.add_btn.TabIndex = 16;
             this.add_btn.Text = "Add To Favorites";
             this.add_btn.UseVisualStyleBackColor = false;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // desc
             // 
