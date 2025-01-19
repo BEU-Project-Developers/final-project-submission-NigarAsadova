@@ -46,8 +46,8 @@ namespace Movies_Project
 
         private void showLogin()
         {
-            Login loginForm = new Login();
-            loginForm.Show();
+            AdminOrUser adminOrUser = new AdminOrUser();
+            adminOrUser.Show();
             this.Hide();
         }
 

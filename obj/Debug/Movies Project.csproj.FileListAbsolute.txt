@@ -76,3 +76,5 @@ C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies 
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies Project.csproj.CopyComplete
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies Project.exe
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies Project.pdb
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.AdminOrUser.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.LoginAdmin.resources
