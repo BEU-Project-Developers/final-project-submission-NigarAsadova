@@ -87,6 +87,7 @@
             this.delete_btn.TabIndex = 41;
             this.delete_btn.Text = "Delete from Favorites";
             this.delete_btn.UseVisualStyleBackColor = false;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click_1);
             // 
             // search_box
             // 

@@ -32,14 +32,24 @@ namespace Movies_Project
             using (SqlConnection conn = new SqlConnection(getConnectionStr()))
             {
                 conn.Open();
-                String query = "SELECT f.FavoriteMovieId, m.Name, m.Rating, m.ReleaseDate, m.Description, m.Genre , d.FullName, a.FullName AS 'Main Actor'\r\nFROM Favorite_Movies f INNER JOIN Movies m ON f.MovieId = m.MovieId\r\nLEFT JOIN Directors d ON m.DirectorId = d.DirectorId\r\nLEFT JOIN Actors a ON a.ActorId = m.FirstActorId";
+                // Make sure to filter based on UserId (the current logged-in user)
+                string query = "SELECT f.FavoriteMovieId, m.Name, m.Rating, m.ReleaseDate, m.Description, m.Genre, " +
+                               "d.FullName, a.FullName AS 'Main Actor' " +
+                               "FROM Favorite_Movies f " +
+                               "INNER JOIN Movies m ON f.MovieId = m.MovieId " +
+                               "LEFT JOIN Directors d ON m.DirectorId = d.DirectorId " +
+                               "LEFT JOIN Actors a ON a.ActorId = m.FirstActorId " +
+                               "WHERE f.UserId = @UserId";  // Filter by the logged-in UserId
+
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@UserId", Login.UserId);  // Pass the UserId from Login class
+
                 DataTable tb = new DataTable();
                 dataAdapter.Fill(tb);
                 fav_movies_dgv.DataSource = tb;
             }
-
         }
+
 
         private void ShowingDatas(object sender, EventArgs e)
         {
@@ -114,5 +124,56 @@ namespace Movies_Project
             if (search_box.Text != "") SearchingFavMovie();
             else LoadData();
         }
+        private void delete_btn_Click_1(object sender, EventArgs e)
+        {
+            if (fav_movies_dgv.SelectedRows.Count > 0)
+            {
+                // Get the selected row
+                DataGridViewRow selectedRow = fav_movies_dgv.SelectedRows[0];
+
+                // Check if the 'FavoriteMovieId' column exists and fetch its value
+                if (selectedRow.Cells["FavoriteMovieId"].Value != null)
+                {
+                    int favoriteMovieId = Convert.ToInt32(selectedRow.Cells["FavoriteMovieId"].Value);
+                    MessageBox.Show("Deleting Movie with ID: " + favoriteMovieId);  // Debugging: Show the ID of the selected movie
+
+                    using (SqlConnection conn = new SqlConnection(getConnectionStr()))
+                    {
+                        try
+                        {
+                            conn.Open();
+                            string query = "DELETE FROM Favorite_Movies WHERE FavoriteMovieId = @FavoriteMovieId";
+                            SqlCommand cmd = new SqlCommand(query, conn);
+                            cmd.Parameters.AddWithValue("@FavoriteMovieId", favoriteMovieId);
+
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Favorite movie deleted successfully.");
+                                LoadData();  // Refresh the DataGridView
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error deleting movie. No movie with the provided ID found.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selected row does not contain valid 'FavoriteMovieId'.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a movie to delete.");
+            }
+        }
+
     }
 }

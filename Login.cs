@@ -43,7 +43,7 @@ namespace Movies_Project
                     {
                         // Assign the retrieved UserId to the static UserId property
                         UserId = Convert.ToInt32(result);
-                        showMovie();
+                        showMovie();  // After login, show the movie screen and load data for the current user
                     }
                     else
                     {
@@ -56,6 +56,7 @@ namespace Movies_Project
                 }
             }
         }
+
 
 
         public Login()
