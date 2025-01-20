@@ -38,7 +38,7 @@
             this.search_movie = new System.Windows.Forms.Label();
             this.logout = new System.Windows.Forms.PictureBox();
             this.user_icon = new System.Windows.Forms.PictureBox();
-            this.add_movie = new System.Windows.Forms.Label();
+            this.watchList = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.inside_out_pic = new System.Windows.Forms.PictureBox();
             this.monster_pic = new System.Windows.Forms.PictureBox();
@@ -82,7 +82,7 @@
             this.panel1.Controls.Add(this.search_movie);
             this.panel1.Controls.Add(this.logout);
             this.panel1.Controls.Add(this.user_icon);
-            this.panel1.Controls.Add(this.add_movie);
+            this.panel1.Controls.Add(this.watchList);
             this.panel1.Controls.Add(this.logo);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
@@ -185,18 +185,18 @@
             this.user_icon.TabIndex = 6;
             this.user_icon.TabStop = false;
             // 
-            // add_movie
+            // watchList
             // 
-            this.add_movie.AutoSize = true;
-            this.add_movie.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_movie.Location = new System.Drawing.Point(60, 244);
-            this.add_movie.Name = "add_movie";
-            this.add_movie.Size = new System.Drawing.Size(111, 28);
-            this.add_movie.TabIndex = 1;
-            this.add_movie.Text = "Add Movie";
-            this.add_movie.Click += new System.EventHandler(this.add_movie_Click);
-            this.add_movie.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
-            this.add_movie.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
+            this.watchList.AutoSize = true;
+            this.watchList.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.watchList.Location = new System.Drawing.Point(60, 244);
+            this.watchList.Name = "watchList";
+            this.watchList.Size = new System.Drawing.Size(99, 28);
+            this.watchList.TabIndex = 1;
+            this.watchList.Text = "WatchList";
+            this.watchList.Click += new System.EventHandler(this.add_movie_Click);
+            this.watchList.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
+            this.watchList.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
             // 
             // logo
             // 
@@ -451,7 +451,7 @@
         private System.Windows.Forms.Label search_movie;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.PictureBox user_icon;
-        private System.Windows.Forms.Label add_movie;
+        private System.Windows.Forms.Label watchList;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.PictureBox inside_out_pic;
         private System.Windows.Forms.PictureBox monster_pic;

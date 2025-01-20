@@ -62,11 +62,11 @@
             // result_dgv
             // 
             this.result_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.result_dgv.Location = new System.Drawing.Point(202, 52);
+            this.result_dgv.Location = new System.Drawing.Point(205, 35);
             this.result_dgv.Name = "result_dgv";
             this.result_dgv.RowHeadersWidth = 51;
             this.result_dgv.RowTemplate.Height = 24;
-            this.result_dgv.Size = new System.Drawing.Size(572, 364);
+            this.result_dgv.Size = new System.Drawing.Size(359, 364);
             this.result_dgv.TabIndex = 16;
             // 
             // delete_btn

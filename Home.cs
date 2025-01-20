@@ -17,8 +17,8 @@ namespace Movies_Project
         {
             InitializeComponent();
 
-            add_movie.MouseEnter += Label_MouseEnter;
-            add_movie.MouseLeave += Label_MouseLeave;
+            watchList.MouseEnter += Label_MouseEnter;
+            watchList.MouseLeave += Label_MouseLeave;
 
             search_movie.MouseEnter += Label_MouseEnter;
             search_movie.MouseLeave += Label_MouseLeave;
@@ -72,8 +72,8 @@ namespace Movies_Project
 
         private void add_movie_Click(object sender, EventArgs e)
         {
-            AddMovies addmovies = new AddMovies();
-            addmovies.Show();
+            Watchlist wl = new Watchlist();
+            wl.Show();
             this.Hide();
         }
 
