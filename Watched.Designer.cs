@@ -38,12 +38,13 @@
             // 
             this.movies_dgv.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.movies_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.movies_dgv.Location = new System.Drawing.Point(107, 155);
+            this.movies_dgv.Location = new System.Drawing.Point(194, 155);
             this.movies_dgv.Name = "movies_dgv";
             this.movies_dgv.RowHeadersWidth = 51;
             this.movies_dgv.RowTemplate.Height = 24;
-            this.movies_dgv.Size = new System.Drawing.Size(722, 223);
+            this.movies_dgv.Size = new System.Drawing.Size(590, 223);
             this.movies_dgv.TabIndex = 0;
+            this.movies_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.movies_dgv_CellContentClick);
             // 
             // delete
             // 
@@ -53,6 +54,7 @@
             this.delete.TabIndex = 1;
             this.delete.Text = "DELETE";
             this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // label1
             // 

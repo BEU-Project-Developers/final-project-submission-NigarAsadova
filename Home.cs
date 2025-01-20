@@ -20,6 +20,9 @@ namespace Movies_Project
             watchList.MouseEnter += Label_MouseEnter;
             watchList.MouseLeave += Label_MouseLeave;
 
+            watched_lb.MouseEnter+= Label_MouseEnter;
+            watched_lb.MouseLeave+= Label_MouseLeave;
+
             search_movie.MouseEnter += Label_MouseEnter;
             search_movie.MouseLeave += Label_MouseLeave;
 
@@ -118,6 +121,13 @@ namespace Movies_Project
         {
             Login login = new Login();
             login.Show();
+            this.Hide();
+        }
+
+        private void watched_lb_Click(object sender, EventArgs e)
+        {
+            Watched w = new Watched();
+            w.Show();
             this.Hide();
         }
     }

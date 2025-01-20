@@ -393,6 +393,7 @@
             this.watched_lb.Size = new System.Drawing.Size(91, 28);
             this.watched_lb.TabIndex = 14;
             this.watched_lb.Text = "Watched";
+            this.watched_lb.Click += new System.EventHandler(this.watched_lb_Click);
             // 
             // Home
             // 
