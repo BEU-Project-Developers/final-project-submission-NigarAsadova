@@ -205,5 +205,67 @@ namespace Movies_Project
         {
 
         }
+
+
+        private void add_to_watched_btn_Click(object sender, EventArgs e)
+        {
+            if (moviesDGV.SelectedRows.Count > 0) // Ensure a movie is selected
+            {
+                DataGridViewRow selectedRow = moviesDGV.SelectedRows[0];
+
+                if (selectedRow.Cells["MovieId"].Value != null) // Ensure MovieId exists
+                {
+                    int MovieId = Convert.ToInt32(selectedRow.Cells["MovieId"].Value);
+
+                    // Create an instance of the AddToWatchedPopup form
+                    AddToWatchedPopup popup = new AddToWatchedPopup();
+                    popup.ShowDialog(); // Show the popup and wait for it to close
+
+                    // Check if the user confirmed the action
+                    if (popup.IsConfirmed)
+                    {
+                        int selectedRate = popup.SelectedRate; // Get the rate from the popup
+
+                        // Save to the database
+                        using (SqlConnection con = new SqlConnection(getConnectionStr()))
+                        {
+                            try
+                            {
+                                con.Open();
+                                string query = "INSERT INTO WatchedMovieList (UserId, MovieId, Rate) VALUES (@UserId, @MovieId, @Rate)";
+                                SqlCommand cmd = new SqlCommand(query, con);
+                                cmd.Parameters.AddWithValue("@UserId", Login.UserId);
+                                cmd.Parameters.AddWithValue("@MovieId", MovieId);
+                                cmd.Parameters.AddWithValue("@Rate", selectedRate);
+
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Movie added to the Watched List successfully!");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Failed to add movie to the Watched List.");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("An error occurred: " + ex.Message);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a valid rate.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a movie to add to the Watched List.");
+                }
+            }
+        }
+
+
     }
 }

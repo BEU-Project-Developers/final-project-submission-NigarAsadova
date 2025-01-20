@@ -26,9 +26,6 @@ namespace Movies_Project
             actors.MouseEnter += Label_MouseEnter;
             actors.MouseLeave += Label_MouseLeave;
 
-            directors.MouseEnter += Label_MouseEnter;
-            directors.MouseLeave += Label_MouseLeave;
-
             favorites.MouseEnter += Label_MouseEnter;
             favorites.MouseLeave += Label_MouseLeave;
 
@@ -108,12 +105,7 @@ namespace Movies_Project
             this.Hide();
         }
 
-        private void directors_Click(object sender, EventArgs e)
-        {
-            Directors directors = new Directors();
-            directors.Show();
-            this.Hide();
-        }
+
 
         private void favorites_Click(object sender, EventArgs e)
         {

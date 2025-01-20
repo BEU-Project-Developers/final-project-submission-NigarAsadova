@@ -31,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Favorites));
             this.fav_movies_btn = new System.Windows.Forms.Button();
             this.fav_actors_btn = new System.Windows.Forms.Button();
-            this.fav_driectors_btn = new System.Windows.Forms.Button();
             this.home_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fav_movies_btn
             // 
             this.fav_movies_btn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fav_movies_btn.Location = new System.Drawing.Point(88, 316);
+            this.fav_movies_btn.Location = new System.Drawing.Point(321, 304);
             this.fav_movies_btn.Name = "fav_movies_btn";
             this.fav_movies_btn.Size = new System.Drawing.Size(241, 71);
             this.fav_movies_btn.TabIndex = 2;
@@ -49,24 +48,13 @@
             // fav_actors_btn
             // 
             this.fav_actors_btn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fav_actors_btn.Location = new System.Drawing.Point(533, 310);
+            this.fav_actors_btn.Location = new System.Drawing.Point(768, 304);
             this.fav_actors_btn.Name = "fav_actors_btn";
             this.fav_actors_btn.Size = new System.Drawing.Size(241, 71);
             this.fav_actors_btn.TabIndex = 3;
             this.fav_actors_btn.Text = "Favorite Actors";
             this.fav_actors_btn.UseVisualStyleBackColor = true;
             this.fav_actors_btn.Click += new System.EventHandler(this.fav_actors_btn_Click);
-            // 
-            // fav_driectors_btn
-            // 
-            this.fav_driectors_btn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fav_driectors_btn.Location = new System.Drawing.Point(971, 310);
-            this.fav_driectors_btn.Name = "fav_driectors_btn";
-            this.fav_driectors_btn.Size = new System.Drawing.Size(241, 71);
-            this.fav_driectors_btn.TabIndex = 4;
-            this.fav_driectors_btn.Text = "Favorite Directors";
-            this.fav_driectors_btn.UseVisualStyleBackColor = true;
-            this.fav_driectors_btn.Click += new System.EventHandler(this.fav_driectors_btn_Click);
             // 
             // home_btn
             // 
@@ -87,13 +75,13 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1306, 691);
             this.Controls.Add(this.home_btn);
-            this.Controls.Add(this.fav_driectors_btn);
             this.Controls.Add(this.fav_actors_btn);
             this.Controls.Add(this.fav_movies_btn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Favorites";
             this.Text = "Favorites";
+            this.Load += new System.EventHandler(this.Favorites_Load);
             this.ResumeLayout(false);
 
         }
@@ -101,7 +89,6 @@
         #endregion
         private System.Windows.Forms.Button fav_movies_btn;
         private System.Windows.Forms.Button fav_actors_btn;
-        private System.Windows.Forms.Button fav_driectors_btn;
         private System.Windows.Forms.Button home_btn;
     }
 }

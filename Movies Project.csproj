@@ -74,6 +74,12 @@
     <Compile Include="AddMovies.Designer.cs">
       <DependentUpon>AddMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddToWatchedPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToWatchedPopup.Designer.cs">
+      <DependentUpon>AddToWatchedPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,12 +91,6 @@
     </Compile>
     <Compile Include="AdminOrUser.Designer.cs">
       <DependentUpon>AdminOrUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Directors.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Directors.Designer.cs">
-      <DependentUpon>Directors.cs</DependentUpon>
     </Compile>
     <Compile Include="FavoriteActors.cs">
       <SubType>Form</SubType>
@@ -166,6 +166,12 @@
     <Compile Include="UserData.Designer.cs">
       <DependentUpon>UserData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Watched.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Watched.Designer.cs">
+      <DependentUpon>Watched.cs</DependentUpon>
+    </Compile>
     <Compile Include="Watchlist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,14 +190,14 @@
     <EmbeddedResource Include="AddMovies.resx">
       <DependentUpon>AddMovies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddToWatchedPopup.resx">
+      <DependentUpon>AddToWatchedPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminOrUser.resx">
       <DependentUpon>AdminOrUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Directors.resx">
-      <DependentUpon>Directors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FavoriteActors.resx">
       <DependentUpon>FavoriteActors.cs</DependentUpon>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserData.resx">
       <DependentUpon>UserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Watched.resx">
+      <DependentUpon>Watched.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Watchlist.resx">
       <DependentUpon>Watchlist.cs</DependentUpon>

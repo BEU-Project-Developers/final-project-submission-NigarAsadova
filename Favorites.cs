@@ -39,11 +39,9 @@ namespace Movies_Project
             this.Hide();
         }
 
-        private void fav_driectors_btn_Click(object sender, EventArgs e)
+        private void Favorites_Load(object sender, EventArgs e)
         {
-            FavoritesDirectors favDirectors = new FavoritesDirectors();
-            favDirectors.Show();
-            this.Hide();
+
         }
     }
 }

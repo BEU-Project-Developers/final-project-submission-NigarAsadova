@@ -37,6 +37,7 @@
             this.desc = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.Label();
             this.errorBox = new System.Windows.Forms.TextBox();
+            this.add_to_watched_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.moviesDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +95,7 @@
             this.add_btn.BackColor = System.Drawing.Color.Red;
             this.add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.add_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_btn.Location = new System.Drawing.Point(633, 525);
+            this.add_btn.Location = new System.Drawing.Point(486, 522);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(193, 53);
             this.add_btn.TabIndex = 16;
@@ -137,6 +138,19 @@
             this.errorBox.TabIndex = 19;
             this.errorBox.TextChanged += new System.EventHandler(this.errorBox_TextChanged);
             // 
+            // add_to_watched_btn
+            // 
+            this.add_to_watched_btn.BackColor = System.Drawing.Color.Red;
+            this.add_to_watched_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.add_to_watched_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_to_watched_btn.Location = new System.Drawing.Point(739, 522);
+            this.add_to_watched_btn.Name = "add_to_watched_btn";
+            this.add_to_watched_btn.Size = new System.Drawing.Size(241, 53);
+            this.add_to_watched_btn.TabIndex = 20;
+            this.add_to_watched_btn.Text = "Add To Watched List";
+            this.add_to_watched_btn.UseVisualStyleBackColor = false;
+            this.add_to_watched_btn.Click += new System.EventHandler(this.add_to_watched_btn_Click);
+            // 
             // SearchMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -145,6 +159,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1367, 692);
+            this.Controls.Add(this.add_to_watched_btn);
             this.Controls.Add(this.errorBox);
             this.Controls.Add(this.message);
             this.Controls.Add(this.desc);
@@ -176,5 +191,6 @@
         private System.Windows.Forms.Label desc;
         private System.Windows.Forms.Label message;
         private System.Windows.Forms.TextBox errorBox;
+        private System.Windows.Forms.Button add_to_watched_btn;
     }
 }

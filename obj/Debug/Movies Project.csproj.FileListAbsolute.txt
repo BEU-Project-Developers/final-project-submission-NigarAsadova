@@ -60,7 +60,6 @@ C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies 
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies Project.csproj.SuggestedBindingRedirects.cache
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.Actors.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.AddMovies.resources
-C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.Directors.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.FavoriteActors.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.FavoriteMovies.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.Favorites.resources
@@ -84,3 +83,5 @@ C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.ActorsData.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.AddActors.resources
 C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.Watchlist.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.AddToWatchedPopup.resources
+C:\Users\Baku\Desktop\Learning C#\Movies Project\final-project\obj\Debug\Movies_Project.Watched.resources

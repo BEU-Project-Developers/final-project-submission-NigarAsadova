@@ -33,7 +33,6 @@
             this.log_out = new System.Windows.Forms.Label();
             this.user_name = new System.Windows.Forms.Label();
             this.favorites = new System.Windows.Forms.Label();
-            this.directors = new System.Windows.Forms.Label();
             this.actors = new System.Windows.Forms.Label();
             this.search_movie = new System.Windows.Forms.Label();
             this.logout = new System.Windows.Forms.PictureBox();
@@ -57,6 +56,7 @@
             this.The_Adventures_of_the_Electronic = new System.Windows.Forms.Label();
             this.The_Imitation_Game = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.watched_lb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_icon)).BeginInit();
@@ -74,10 +74,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel1.Controls.Add(this.watched_lb);
             this.panel1.Controls.Add(this.log_out);
             this.panel1.Controls.Add(this.user_name);
             this.panel1.Controls.Add(this.favorites);
-            this.panel1.Controls.Add(this.directors);
             this.panel1.Controls.Add(this.actors);
             this.panel1.Controls.Add(this.search_movie);
             this.panel1.Controls.Add(this.logout);
@@ -117,7 +117,7 @@
             // 
             this.favorites.AutoSize = true;
             this.favorites.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.favorites.Location = new System.Drawing.Point(61, 459);
+            this.favorites.Location = new System.Drawing.Point(60, 439);
             this.favorites.Name = "favorites";
             this.favorites.Size = new System.Drawing.Size(92, 28);
             this.favorites.TabIndex = 11;
@@ -126,24 +126,11 @@
             this.favorites.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
             this.favorites.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
             // 
-            // directors
-            // 
-            this.directors.AutoSize = true;
-            this.directors.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.directors.Location = new System.Drawing.Point(60, 409);
-            this.directors.Name = "directors";
-            this.directors.Size = new System.Drawing.Size(93, 28);
-            this.directors.TabIndex = 10;
-            this.directors.Text = "Directors";
-            this.directors.Click += new System.EventHandler(this.directors_Click);
-            this.directors.MouseEnter += new System.EventHandler(this.Label_MouseEnter);
-            this.directors.MouseLeave += new System.EventHandler(this.Label_MouseLeave);
-            // 
             // actors
             // 
             this.actors.AutoSize = true;
             this.actors.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actors.Location = new System.Drawing.Point(74, 356);
+            this.actors.Location = new System.Drawing.Point(72, 390);
             this.actors.Name = "actors";
             this.actors.Size = new System.Drawing.Size(69, 28);
             this.actors.TabIndex = 9;
@@ -156,7 +143,7 @@
             // 
             this.search_movie.AutoSize = true;
             this.search_movie.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search_movie.Location = new System.Drawing.Point(49, 299);
+            this.search_movie.Location = new System.Drawing.Point(44, 341);
             this.search_movie.Name = "search_movie";
             this.search_movie.Size = new System.Drawing.Size(134, 28);
             this.search_movie.TabIndex = 8;
@@ -397,6 +384,16 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Popular Movies";
             // 
+            // watched_lb
+            // 
+            this.watched_lb.AutoSize = true;
+            this.watched_lb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.watched_lb.Location = new System.Drawing.Point(63, 291);
+            this.watched_lb.Name = "watched_lb";
+            this.watched_lb.Size = new System.Drawing.Size(91, 28);
+            this.watched_lb.TabIndex = 14;
+            this.watched_lb.Text = "Watched";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -446,7 +443,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label favorites;
-        private System.Windows.Forms.Label directors;
         private System.Windows.Forms.Label actors;
         private System.Windows.Forms.Label search_movie;
         private System.Windows.Forms.PictureBox logout;
@@ -472,5 +468,6 @@
         private System.Windows.Forms.Label log_out;
         private System.Windows.Forms.Label user_name;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label watched_lb;
     }
 }
