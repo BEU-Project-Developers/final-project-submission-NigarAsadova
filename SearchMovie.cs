@@ -159,43 +159,46 @@ namespace Movies_Project
 
         private void add_btn_Click(object sender, EventArgs e)
         {
-            if (selectedMovieId == -1)
+            if (moviesDGV.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Please select a movie first.");
-                return;
-            }
-
-            using (SqlConnection conn = new SqlConnection(getConnectionStr()))
-            {
-                try
+                DataGridViewRow selectedRow = moviesDGV.SelectedRows[0];
+                if (selectedRow.Cells["MovieId"].Value != null)
                 {
-                    conn.Open();
-                    string query = @"
+                    int MovieId = Convert.ToInt32(selectedRow.Cells["MovieId"].Value);
+                    using (SqlConnection con = new SqlConnection(getConnectionStr()))
+                    {
+                        try
+                        {
+                            con.Open();
+                            string query = @"
                 IF NOT EXISTS (SELECT 1 FROM Favorite_Movies WHERE UserId = @UserId AND MovieId = @MovieId)
                 BEGIN
                     INSERT INTO Favorite_Movies (UserId, MovieId) VALUES (@UserId, @MovieId)
                 END";
+                            SqlCommand cmd = new SqlCommand(query, con);
+                            cmd.Parameters.AddWithValue("@UserId", Login.UserId); // Use the static UserId
+                            cmd.Parameters.AddWithValue("@MovieId", selectedMovieId);
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@UserId", Login.UserId); // Use the static UserId
-                    cmd.Parameters.AddWithValue("@MovieId", selectedMovieId);
+                            int rowsAffected = cmd.ExecuteNonQuery();
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Movie added to favorites successfully.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("This movie is already in your favorites.");
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Movie added to favorites successfully.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("This movie is already in your favorites.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                else MessageBox.Show("Selected row does not contain valid 'MovieId'.");
             }
+            else MessageBox.Show("Please select a movie to add.");
         }
 
         private void SearchMovie_Load_1(object sender, EventArgs e)

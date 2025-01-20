@@ -75,7 +75,7 @@ namespace Movies_Project
                             }
                             else
                             {
-                                MessageBox.Show("Error deleting movie. No actor with the provided ID found.");
+                                MessageBox.Show("Error deleting actor. No actor with the provided ID found.");
                             }
                         } catch(Exception ex)
                         {
