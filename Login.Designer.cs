@@ -89,6 +89,7 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(438, 40);
             this.usernameBox.TabIndex = 3;
+            this.usernameBox.TextChanged += new System.EventHandler(this.usernameBox_TextChanged);
             // 
             // codeBox
             // 

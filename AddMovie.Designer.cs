@@ -42,8 +42,6 @@
             this.desc_box = new System.Windows.Forms.TextBox();
             this.rate_box = new System.Windows.Forms.NumericUpDown();
             this.add_btn = new System.Windows.Forms.Button();
-            this.bdate_lb = new System.Windows.Forms.Label();
-            this.bdate_box = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.rate_box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +85,7 @@
             // 
             this.rate_lb.AutoSize = true;
             this.rate_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rate_lb.Location = new System.Drawing.Point(28, 260);
+            this.rate_lb.Location = new System.Drawing.Point(24, 208);
             this.rate_lb.Name = "rate_lb";
             this.rate_lb.Size = new System.Drawing.Size(44, 20);
             this.rate_lb.TabIndex = 5;
@@ -151,7 +149,7 @@
             // rate_box
             // 
             this.rate_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rate_box.Location = new System.Drawing.Point(33, 291);
+            this.rate_box.Location = new System.Drawing.Point(29, 239);
             this.rate_box.Maximum = new decimal(new int[] {
             10,
             0,
@@ -172,24 +170,6 @@
             this.add_btn.UseVisualStyleBackColor = true;
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
-            // bdate_lb
-            // 
-            this.bdate_lb.AutoSize = true;
-            this.bdate_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdate_lb.Location = new System.Drawing.Point(28, 192);
-            this.bdate_lb.Name = "bdate_lb";
-            this.bdate_lb.Size = new System.Drawing.Size(197, 20);
-            this.bdate_lb.TabIndex = 15;
-            this.bdate_lb.Text = "Directors\'s Date Of Birth";
-            // 
-            // bdate_box
-            // 
-            this.bdate_box.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdate_box.Location = new System.Drawing.Point(24, 215);
-            this.bdate_box.Name = "bdate_box";
-            this.bdate_box.Size = new System.Drawing.Size(233, 38);
-            this.bdate_box.TabIndex = 14;
-            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,8 +177,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(667, 386);
-            this.Controls.Add(this.bdate_lb);
-            this.Controls.Add(this.bdate_box);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.rate_box);
             this.Controls.Add(this.label5);
@@ -236,7 +214,5 @@
         private System.Windows.Forms.TextBox desc_box;
         private System.Windows.Forms.NumericUpDown rate_box;
         private System.Windows.Forms.Button add_btn;
-        private System.Windows.Forms.Label bdate_lb;
-        private System.Windows.Forms.TextBox bdate_box;
     }
 }

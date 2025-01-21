@@ -116,5 +116,10 @@ namespace Movies_Project
             aou.Show();
             this.Hide();
         }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
