@@ -125,6 +125,7 @@
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 20);
             this.message.TabIndex = 18;
+            this.message.Click += new System.EventHandler(this.message_Click);
             // 
             // errorBox
             // 
@@ -134,7 +135,7 @@
             this.errorBox.ForeColor = System.Drawing.Color.Red;
             this.errorBox.Location = new System.Drawing.Point(418, 122);
             this.errorBox.Name = "errorBox";
-            this.errorBox.Size = new System.Drawing.Size(100, 20);
+            this.errorBox.Size = new System.Drawing.Size(610, 20);
             this.errorBox.TabIndex = 19;
             this.errorBox.TextChanged += new System.EventHandler(this.errorBox_TextChanged);
             // 
@@ -172,6 +173,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SearchMovie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchMovie";
             this.Load += new System.EventHandler(this.SearchMovie_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.moviesDGV)).EndInit();

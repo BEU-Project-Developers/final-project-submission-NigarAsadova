@@ -39,6 +39,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lockIcon = new System.Windows.Forms.PictureBox();
             this.error_msgBox = new System.Windows.Forms.TextBox();
+            this.back_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lockIcon)).BeginInit();
             this.SuspendLayout();
@@ -162,12 +163,24 @@
             this.error_msgBox.Size = new System.Drawing.Size(100, 15);
             this.error_msgBox.TabIndex = 13;
             // 
+            // back_btn
+            // 
+            this.back_btn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.back_btn.Location = new System.Drawing.Point(12, 12);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(94, 31);
+            this.back_btn.TabIndex = 15;
+            this.back_btn.Text = "Back";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(691, 454);
+            this.Controls.Add(this.back_btn);
             this.Controls.Add(this.error_msgBox);
             this.Controls.Add(this.lockIcon);
             this.Controls.Add(this.codeBox);
@@ -181,6 +194,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(709, 501);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lockIcon)).EndInit();
@@ -201,5 +215,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox lockIcon;
         private System.Windows.Forms.TextBox error_msgBox;
+        private System.Windows.Forms.Button back_btn;
     }
 }

@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Movies_Project
 {
@@ -17,6 +18,7 @@ namespace Movies_Project
         public ActorsData()
         {
             InitializeComponent();
+            searchBar.KeyDown += searchBar_KeyDown;
         }
 
         private string getConnectionStr()
@@ -28,6 +30,8 @@ namespace Movies_Project
         {
             LoadActors();
         }
+
+        // Loading Actors
 
         private void LoadActors()
         {
@@ -48,6 +52,8 @@ namespace Movies_Project
             }
         }
 
+        // Deleting actor
+
         private void delete_btn_Click(object sender, EventArgs e)
         {
             if (result_dgv.SelectedRows.Count > 0)
@@ -63,6 +69,10 @@ namespace Movies_Project
                         try
                         {
                              con.Open();
+                            string querySet = "DELETE FROM MoviesSet WHERE ActorId = @ActorId";
+                            SqlCommand cmm = new SqlCommand(querySet, con);
+                            cmm.Parameters.AddWithValue("@ActorId", ActorId);
+
                             string query = "DELETE FROM Actors WHERE ActorId = @ActorId";
                             SqlCommand cm = new SqlCommand(query, con);
                             cm.Parameters.AddWithValue("@ActorId", ActorId);
@@ -95,6 +105,74 @@ namespace Movies_Project
         {
             AddActors aa = new AddActors();
             aa.ShowDialog();
+        }
+
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchingActor();
+            }
+        }
+
+        private void ActorsData_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        // Searching Actor
+
+        private void SearchingActor()
+        {
+            using (SqlConnection conn = new SqlConnection(getConnectionStr()))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "Select * FROM Actors WHERE UPPER(ActorName) LIKE @Name";
+                    SqlCommand cm = new SqlCommand(query, conn);
+                    cm.Parameters.AddWithValue("@Name", "%" + searchBar.Text + "%");
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(cm);
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
+                    result_dgv.DataSource = dt;
+                    if (dt.Rows.Count == 0)
+                    {
+                        errorBox.Text = "No result";
+                    }
+                }
+                catch (Exception e)
+                {
+                    errorBox.Text = e.Message;
+                }
+            }
+        }
+
+        private void search_icon_Click(object sender, EventArgs e)
+        {
+            SearchingActor();
+            search_icon.BorderStyle = BorderStyle.Fixed3D;
+            if(searchBar.Text == "")
+            {
+                LoadActors();
+            }
+        }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            HomeAdmin ha = new HomeAdmin();
+            ha.Show();
+            this.Hide();
+        }
+
+        private void result_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

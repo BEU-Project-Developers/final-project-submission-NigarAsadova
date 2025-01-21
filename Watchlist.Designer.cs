@@ -33,6 +33,7 @@
             this.delete_btn = new System.Windows.Forms.Button();
             this.watchlist_lb = new System.Windows.Forms.Label();
             this.show_btn = new System.Windows.Forms.Button();
+            this.back_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.watchlist_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +81,17 @@
             this.show_btn.UseVisualStyleBackColor = true;
             this.show_btn.Click += new System.EventHandler(this.show_btn_Click);
             // 
+            // back_btn
+            // 
+            this.back_btn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.back_btn.Location = new System.Drawing.Point(12, 12);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(94, 31);
+            this.back_btn.TabIndex = 4;
+            this.back_btn.Text = "Back";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // Watchlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -87,6 +99,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(840, 450);
+            this.Controls.Add(this.back_btn);
             this.Controls.Add(this.show_btn);
             this.Controls.Add(this.watchlist_lb);
             this.Controls.Add(this.delete_btn);
@@ -106,5 +119,6 @@
         private System.Windows.Forms.Button delete_btn;
         private System.Windows.Forms.Label watchlist_lb;
         private System.Windows.Forms.Button show_btn;
+        private System.Windows.Forms.Button back_btn;
     }
 }

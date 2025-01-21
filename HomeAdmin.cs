@@ -43,5 +43,19 @@ namespace Movies_Project
             ad.Show();
             this.Hide();
         }
+
+        private void movies_btn_Click(object sender, EventArgs e)
+        {
+            MoviesData m = new MoviesData();
+            m.Show();
+            this.Hide();
+        }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            LoginAdmin la = new LoginAdmin();
+            la.Show();
+            this.Hide();
+        }
     }
 }

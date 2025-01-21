@@ -101,5 +101,12 @@ namespace Movies_Project
             }
             else MessageBox.Show("Select row to delete");
         }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            Home h = new Home();
+            h.Show();
+            this.Hide();
+        }
     }
 }

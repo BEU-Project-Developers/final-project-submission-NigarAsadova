@@ -109,5 +109,12 @@ namespace Movies_Project
             signUp.Show();
             this.Hide();
         }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            AdminOrUser aou = new AdminOrUser();
+            aou.Show();
+            this.Hide();
+        }
     }
 }

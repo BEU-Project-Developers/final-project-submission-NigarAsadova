@@ -113,6 +113,7 @@
             this.Controls.Add(this.fav_actors_dgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FavoriteActors";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FavoriteActors";
             ((System.ComponentModel.ISupportInitialize)(this.fav_actors_dgv)).EndInit();
             this.ResumeLayout(false);

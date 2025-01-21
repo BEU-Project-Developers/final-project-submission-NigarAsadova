@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Movies_Project
 {
@@ -21,6 +22,12 @@ namespace Movies_Project
         private void UserData_Load(object sender, EventArgs e)
         {
 
+        }
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            HomeAdmin ha = new HomeAdmin();
+            ha.Show();
+            this.Hide();
         }
 
         private string getConnectionStr()
@@ -68,9 +75,12 @@ namespace Movies_Project
                         try
                         {
                             con.Open();
+
                             // Delete related records in Favorite_Movies
                             string deleteFavoritesQuery = "DELETE FROM Favorite_Movies WHERE UserId = @UserId";
                             SqlCommand deleteFavoritesCmd = new SqlCommand(deleteFavoritesQuery, con);
+                            string deleteWatchListQuery = "DELETE FROM WatchList WHEREWHERE UserId = @UserId";
+                            SqlCommand deleteWatchListmd = new SqlCommand(deleteWatchListQuery, con);
                             deleteFavoritesCmd.Parameters.AddWithValue("@UserId", userId);
                             deleteFavoritesCmd.ExecuteNonQuery();
 
@@ -85,6 +95,7 @@ namespace Movies_Project
                                 {
                                     MessageBox.Show("User deleted successfully.");
                                     LoadUserData(); // Refresh DataGridView
+                                    errorBox.Text = "";
                                 }
                                 else
                                 {
@@ -114,6 +125,49 @@ namespace Movies_Project
         {
             AddUser au = new AddUser();
             au.Show();
+        }
+
+        private void SearchingUser()
+        {
+            using (SqlConnection conn = new SqlConnection(getConnectionStr()))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT UserId,username,FullName ,Gmail FROM Users WHERE UPPER(username) LIKE @Name";
+                    SqlCommand cm = new SqlCommand(query, conn);
+                    cm.Parameters.AddWithValue("@Name", "%" + textBox1.Text + "%");
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(cm);
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
+                    result_dgv.DataSource = dt;
+                    if (dt.Rows.Count == 0)
+                    {
+                        errorBox.Text = "No result";
+                    }
+                }
+                catch (Exception e)
+                {
+                    errorBox.Text = e.Message;
+                }
+            }
+        }
+
+        private void search_icon_Click(object sender, EventArgs e)
+        {
+            SearchingUser();
+            search_icon.BorderStyle = BorderStyle.Fixed3D;
+            if (textBox1.Text == "")
+            {
+                LoadUserData();
+            }
+        }
+
+        private void back_btn_Click_1(object sender, EventArgs e)
+        {
+            HomeAdmin ha = new HomeAdmin();
+            ha.Show();
+            this.Hide();
         }
     }
 }

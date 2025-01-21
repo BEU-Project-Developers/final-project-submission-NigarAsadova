@@ -167,6 +167,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginTitle);
             this.Name = "LoginAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginAdmin";
             this.Load += new System.EventHandler(this.LoginAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lockIcon)).EndInit();

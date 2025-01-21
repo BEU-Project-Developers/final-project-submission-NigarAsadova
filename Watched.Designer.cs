@@ -31,6 +31,7 @@
             this.movies_dgv = new System.Windows.Forms.DataGridView();
             this.delete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.back_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.movies_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,12 +67,24 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Watched List";
             // 
+            // back_btn
+            // 
+            this.back_btn.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.back_btn.Location = new System.Drawing.Point(12, 12);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(94, 31);
+            this.back_btn.TabIndex = 23;
+            this.back_btn.Text = "Back";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // Watched
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(940, 530);
+            this.Controls.Add(this.back_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.movies_dgv);
@@ -89,5 +102,6 @@
         private System.Windows.Forms.DataGridView movies_dgv;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button back_btn;
     }
 }

@@ -156,7 +156,6 @@
             this.nameBox.Location = new System.Drawing.Point(337, 258);
             this.nameBox.Multiline = true;
             this.nameBox.Name = "nameBox";
-            this.nameBox.PasswordChar = '*';
             this.nameBox.Size = new System.Drawing.Size(229, 40);
             this.nameBox.TabIndex = 16;
             // 
@@ -188,6 +187,7 @@
             this.Controls.Add(this.signUpTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "SignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
             this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);

@@ -159,6 +159,7 @@ namespace Movies_Project
 
         private void add_btn_Click(object sender, EventArgs e)
         {
+            
             if (moviesDGV.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = moviesDGV.SelectedRows[0];
@@ -177,7 +178,7 @@ namespace Movies_Project
                 END";
                             SqlCommand cmd = new SqlCommand(query, con);
                             cmd.Parameters.AddWithValue("@UserId", Login.UserId); // Use the static UserId
-                            cmd.Parameters.AddWithValue("@MovieId", selectedMovieId);
+                            cmd.Parameters.AddWithValue("@MovieId", MovieId);
 
                             int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -266,6 +267,9 @@ namespace Movies_Project
             }
         }
 
+        private void message_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

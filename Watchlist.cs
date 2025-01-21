@@ -57,8 +57,11 @@ namespace Movies_Project
             LoadWatchlist();
         }
 
+        // Delete movie from watchlist
+
         private void delete_btn_Click(object sender, EventArgs e)
         {
+            // Check that user select row or not
             if (watchlist_dgv.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = watchlist_dgv.SelectedRows[0];
@@ -96,6 +99,13 @@ namespace Movies_Project
                 }
             }
             else MessageBox.Show("Select movie's row to delete");
+        }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            Home h = new Home();
+            h.Show();
+            this.Hide();
         }
     }
 }
